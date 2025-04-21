@@ -1,0 +1,425 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --color-primary-rgb: 124, 58, 237;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --color-primary-rgb: 124, 58, 237;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.5);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 92, 246, 0.8);
+  }
+}
+
+/* Neon glow effect */
+.neon-glow {
+  text-shadow: 0 0 5px rgba(139, 92, 246, 0.5), 0 0 10px rgba(139, 92, 246, 0.5), 0 0 15px rgba(139, 92, 246, 0.5), 0 0
+    20px rgba(139, 92, 246, 0.5);
+}
+
+.neon-box {
+  box-shadow: 0 0 5px rgba(139, 92, 246, 0.5), 0 0 10px rgba(139, 92, 246, 0.3), 0 0 15px rgba(139, 92, 246, 0.2), inset
+    0 0 5px rgba(139, 92, 246, 0.1);
+}
+
+/* Gradient animations */
+.gradient-animation {
+  background: linear-gradient(
+    45deg,
+    rgba(76, 29, 149, 0.8),
+    rgba(124, 58, 237, 0.8),
+    rgba(139, 92, 246, 0.8),
+    rgba(167, 139, 250, 0.8)
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 #ff00c1;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -1px 0 #00fff9;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(31px, 9999px, 94px, 0);
+  }
+  4.16666667% {
+    clip: rect(91px, 9999px, 43px, 0);
+  }
+  8.33333333% {
+    clip: rect(15px, 9999px, 13px, 0);
+  }
+  12.5% {
+    clip: rect(75px, 9999px, 57px, 0);
+  }
+  16.66666667% {
+    clip: rect(73px, 9999px, 46px, 0);
+  }
+  20.83333333% {
+    clip: rect(57px, 9999px, 73px, 0);
+  }
+  25% {
+    clip: rect(35px, 9999px, 56px, 0);
+  }
+  29.16666667% {
+    clip: rect(50px, 9999px, 57px, 0);
+  }
+  33.33333333% {
+    clip: rect(9px, 9999px, 55px, 0);
+  }
+  37.5% {
+    clip: rect(9px, 9999px, 89px, 0);
+  }
+  41.66666667% {
+    clip: rect(19px, 9999px, 87px, 0);
+  }
+  45.83333333% {
+    clip: rect(5px, 9999px, 100px, 0);
+  }
+  50% {
+    clip: rect(82px, 9999px, 23px, 0);
+  }
+  54.16666667% {
+    clip: rect(33px, 9999px, 40px, 0);
+  }
+  58.33333333% {
+    clip: rect(72px, 9999px, 98px, 0);
+  }
+  62.5% {
+    clip: rect(33px, 9999px, 32px, 0);
+  }
+  66.66666667% {
+    clip: rect(15px, 9999px, 63px, 0);
+  }
+  70.83333333% {
+    clip: rect(34px, 9999px, 70px, 0);
+  }
+  75% {
+    clip: rect(99px, 9999px, 61px, 0);
+  }
+  79.16666667% {
+    clip: rect(33px, 9999px, 80px, 0);
+  }
+  83.33333333% {
+    clip: rect(35px, 9999px, 48px, 0);
+  }
+  87.5% {
+    clip: rect(35px, 9999px, 31px, 0);
+  }
+  91.66666667% {
+    clip: rect(44px, 9999px, 93px, 0);
+  }
+  95.83333333% {
+    clip: rect(46px, 9999px, 34px, 0);
+  }
+  100% {
+    clip: rect(82px, 9999px, 31px, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(65px, 9999px, 65px, 0);
+  }
+  4.16666667% {
+    clip: rect(84px, 9999px, 27px, 0);
+  }
+  8.33333333% {
+    clip: rect(86px, 9999px, 11px, 0);
+  }
+  12.5% {
+    clip: rect(59px, 9999px, 54px, 0);
+  }
+  16.66666667% {
+    clip: rect(20px, 9999px, 68px, 0);
+  }
+  20.83333333% {
+    clip: rect(20px, 9999px, 31px, 0);
+  }
+  25% {
+    clip: rect(19px, 9999px, 98px, 0);
+  }
+  29.16666667% {
+    clip: rect(71px, 9999px, 65px, 0);
+  }
+  33.33333333% {
+    clip: rect(85px, 9999px, 88px, 0);
+  }
+  37.5% {
+    clip: rect(32px, 9999px, 23px, 0);
+  }
+  41.66666667% {
+    clip: rect(63px, 9999px, 31px, 0);
+  }
+  45.83333333% {
+    clip: rect(92px, 9999px, 29px, 0);
+  }
+  50% {
+    clip: rect(1px, 9999px, 24px, 0);
+  }
+  54.16666667% {
+    clip: rect(60px, 9999px, 79px, 0);
+  }
+  58.33333333% {
+    clip: rect(42px, 9999px, 27px, 0);
+  }
+  62.5% {
+    clip: rect(30px, 9999px, 14px, 0);
+  }
+  66.66666667% {
+    clip: rect(33px, 9999px, 17px, 0);
+  }
+  70.83333333% {
+    clip: rect(58px, 9999px, 44px, 0);
+  }
+  75% {
+    clip: rect(71px, 9999px, 40px, 0);
+  }
+  79.16666667% {
+    clip: rect(84px, 9999px, 21px, 0);
+  }
+  83.33333333% {
+    clip: rect(22px, 9999px, 35px, 0);
+  }
+  87.5% {
+    clip: rect(31px, 9999px, 49px, 0);
+  }
+  91.66666667% {
+    clip: rect(7px, 9999px, 82px, 0);
+  }
+  95.83333333% {
+    clip: rect(38px, 9999px, 46px, 0);
+  }
+  100% {
+    clip: rect(91px, 9999px, 57px, 0);
+  }
+}
+
+/* Terminal text effect */
+.terminal-text {
+  border-right: 0.15em solid #8b5cf6;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #8b5cf6;
+  }
+}
+
+/* 3D card effect */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.card-3d:hover {
+  transform: rotateY(10deg) rotateX(10deg);
+}
+
+.card-3d-content {
+  transform: translateZ(20px);
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation delay */
+.stagger-1 {
+  transition-delay: 0.1s;
+}
+.stagger-2 {
+  transition-delay: 0.2s;
+}
+.stagger-3 {
+  transition-delay: 0.3s;
+}
+.stagger-4 {
+  transition-delay: 0.4s;
+}
+.stagger-5 {
+  transition-delay: 0.5s;
+}
+
+/* Add custom utility classes */
+.perspective-1200 {
+  perspective: 1200px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.shadow-glow {
+  box-shadow: 0 0 10px rgba(var(--color-primary-rgb)/0.5);
+}
+
+.grid-pattern {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-image: 
+    linear-gradient(rgba(var(--color-primary-rgb)/0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--color-primary-rgb)/0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: perspective(500px) rotateX(60deg);
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: perspective(500px) rotateX(60deg) translateY(0);
+  }
+  100% {
+    transform: perspective(500px) rotateX(60deg) translateY(40px);
+  }
+}
+
