@@ -131,7 +131,7 @@ export default function HeroSection() {
           >
             <TypeAnimation
               sequence={[
-                "Building modern web applications",
+                "Building modern web and mobile applications",
                 1000,
                 "Crafting elegant user interfaces",
                 1000,

@@ -27,7 +27,7 @@ export default function AboutSection() {
             </h2>
             <p className="text-gray-400 text-lg mb-6">Get to know me better</p>
             <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              I'm a passionate Software Engineer with expertise in building modern, high-performance web applications.
+              I'm a passionate Software Engineer with expertise in building modern, high-performance web and mobile applications.
               With a strong foundation in both frontend and backend technologies, I create seamless digital experiences
               that solve real-world problems.
             </p>
