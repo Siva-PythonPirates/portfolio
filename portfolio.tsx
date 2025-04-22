@@ -880,7 +880,7 @@ export default function Portfolio() {
                         <div className="space-y-4">
                           <div className="flex items-center">
                             <Mail className="h-5 w-5 mr-3 text-muted-foreground" />
-                            <a href="mailto:contact@example.com" className="hover:text-primary transition-colors">
+                            <a href="mailto:sivashankars0803@gmail.com" className="hover:text-primary transition-colors">
                               contact@example.com
                             </a>
                           </div>
@@ -1005,7 +1005,7 @@ export default function Portfolio() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:sivashankars0803@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label="Email"
               >

@@ -27,21 +27,39 @@ export default function ContactSection() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch('http://localhost:5000/api/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
+      const data = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 5000);
+      } else {
+        console.error('Error sending message:', data.error);
+        // You could add error handling UI here
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      // You could add error handling UI here
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

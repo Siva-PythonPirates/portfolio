@@ -63,14 +63,35 @@ export function ContactSection({ socialLinks = defaultSocialLinks, className }: 
     e.preventDefault()
     setIsSubmitting(true)
 
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitSuccess(true)
-      setFormData({ name: "", email: "", message: "" })
-      setTimeout(() => {
-        setSubmitSuccess(false)
-      }, 5000)
-    }, 1500)
+    try {
+      const response = await fetch('http://localhost:5000/api/messages', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitSuccess(true);
+        setFormData({ name: "", email: "", message: "" });
+        
+        // Reset success message after 5 seconds
+        setTimeout(() => {
+          setSubmitSuccess(false);
+        }, 5000);
+      } else {
+        console.error('Error sending message:', data.error);
+        // You could add error handling UI here
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      // You could add error handling UI here
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (

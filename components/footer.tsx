@@ -84,7 +84,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:sivashankars0803@gmail.com"
                 className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
                 aria-label="Email"
               >
