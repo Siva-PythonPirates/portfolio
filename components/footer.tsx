@@ -57,7 +57,7 @@ export default function Footer() {
               className="flex justify-center md:justify-end space-x-4"
             >
               <a
-                href="https://github.com/sivashankar"
+                href="https://github.com/Siva-PythonPirates"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
@@ -66,7 +66,7 @@ export default function Footer() {
                 <Github className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
               </a>
               <a
-                href="https://linkedin.com/in/sivashankar"
+                href="https://www.linkedin.com/in/sivashankar-s-33117b249/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"
@@ -75,7 +75,7 @@ export default function Footer() {
                 <Linkedin className="h-5 w-5 text-gray-400 hover:text-white transition-colors" />
               </a>
               <a
-                href="https://twitter.com/sivashankar"
+                href="https://x.com/Shivzalt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-gray-800 hover:bg-gray-700 transition-colors"

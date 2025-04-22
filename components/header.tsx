@@ -92,7 +92,7 @@ export default function Header({ activeSection, onNavClick }: HeaderProps) {
 
           <div className="hidden md:flex items-center space-x-2">
             <motion.a
-              href="https://github.com/sivashankar"
+              href="https://github.com/Siva-PythonPirates"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, rotate: 5 }}
@@ -102,7 +102,7 @@ export default function Header({ activeSection, onNavClick }: HeaderProps) {
               <Github className="h-5 w-5 text-white" />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/in/sivashankar"
+              href="https://www.linkedin.com/in/sivashankar-s-33117b249/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, rotate: -5 }}
@@ -161,7 +161,7 @@ export default function Header({ activeSection, onNavClick }: HeaderProps) {
 
             <div className="flex items-center space-x-2 pt-2">
               <motion.a
-                href="https://github.com/sivashankar"
+                href="https://github.com/Siva-PythonPirates"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -171,7 +171,7 @@ export default function Header({ activeSection, onNavClick }: HeaderProps) {
                 <Github className="h-5 w-5 text-white" />
               </motion.a>
               <motion.a
-                href="https://linkedin.com/in/sivashankar"
+                href="https://www.linkedin.com/in/sivashankar-s-33117b249/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}

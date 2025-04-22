@@ -210,7 +210,7 @@ export default function SkillsSection() {
       icon: <Workflow className="h-6 w-6" />,
       skills: [
         { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-        { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+        { name: "AWS", logo: "https://i.pinimg.com/736x/4a/41/7d/4a417d1f8cab870d4e93498ae1ae2d21.jpg" },
         { name: "Azure", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" },
       ],
       color: "from-orange-500 to-amber-400",
