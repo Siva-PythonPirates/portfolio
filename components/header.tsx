@@ -25,10 +25,10 @@ export default function Header({ activeSection, onNavClick }: HeaderProps) {
 
   const navItems = [
     { id: "about", label: "About" },
+    { id: "education", label: "Education" },
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "achievements", label: "Achievements" },
-    { id: "education", label: "Education" },
     // { id: "hobbies", label: "Hobbies" },
     { id: "responsibility", label: "Responsibility" },
     { id: "contact", label: "Contact" },
