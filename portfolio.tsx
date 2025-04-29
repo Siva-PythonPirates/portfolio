@@ -535,7 +535,7 @@ export default function Portfolio() {
                 {[
                   {
                     title: "Cyber Conquest",
-                    description: "Winner of the Cyber Conquest event, Chennai Institute of Technology (Cybersecurity)",
+                    description: "Winner of the Cyber Conquest event, Chennai Institute of Technology ",
                     icon: "🏆"
                   },
                   {
@@ -555,17 +555,17 @@ export default function Portfolio() {
                   },
                   {
                     title: "Nexus Elite Security CTF",
-                    description: "5th Place in the Nexus Elite Security CTF competition (Cybersecurity)",
+                    description: "5th Place in the Nexus Elite Security CTF competition ",
                     icon: "🛡️"
                   },
                   {
                     title: "PeCan+ Capture the Flag",
-                    description: "6th Place in the PeCan+ Capture the Flag (CTF) event, Edith Cowan University (Cybersecurity)",
+                    description: "6th Place in the PeCan+ Capture the Flag (CTF) event, Edith Cowan University ",
                     icon: "🚩"
                   },
                   {
                     title: "Penathon2k24 CTF",
-                    description: "37th Rank in the national-level Penathon2k24 CTF challenge (Cybersecurity)",
+                    description: "37th Rank in the national-level Penathon2k24 CTF challenge ",
                     icon: "🎯"
                   }
                 ].map((achievement, index) => (

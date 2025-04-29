@@ -14,7 +14,7 @@ export default function AchievementsSection() {
       {
         icon: <Trophy className="h-10 w-10 text-yellow-400" />,
         title: "Cyber Conquest Winner",
-        description: "Winner of the Cyber Conquest event at Chennai Institute of Technology (Cybersecurity).",
+        description: "Winner of the Cyber Conquest event at Chennai Institute of Technology .",
         year: "2023",
         color: "from-yellow-500 to-amber-500",
         delay: 0.1,
@@ -22,7 +22,7 @@ export default function AchievementsSection() {
       {
         icon: <Award className="h-10 w-10 text-orange-400" />,
         title: "5th Place – Nexus Elite Security CTF",
-        description: "Secured 5th Place in the Nexus Elite Security CTF competition (Cybersecurity).",
+        description: "Secured 5th Place in the Nexus Elite Security CTF competition .",
         year: "2023",
         color: "from-orange-500 to-red-500",
         delay: 0.2,
@@ -30,7 +30,7 @@ export default function AchievementsSection() {
       {
         icon: <Award className="h-10 w-10 text-red-400" />,
         title: "6th Place – PeCan+ CTF",
-        description: "Achieved 6th Place in the PeCan+ Capture the Flag event at Edith Cowan University (Cybersecurity).",
+        description: "Achieved 6th Place in the PeCan+ Capture the Flag event at Edith Cowan University .",
         year: "2023",
         color: "from-red-500 to-pink-500",
         delay: 0.3,
@@ -38,7 +38,7 @@ export default function AchievementsSection() {
       {
         icon: <Award className="h-10 w-10 text-gray-400" />,
         title: "37th Rank – Penathon2k24 CTF",
-        description: "Secured 37th Rank in the national-level Penathon2k24 CTF challenge (Cybersecurity).",
+        description: "Secured 37th Rank in the national-level Penathon2k24 CTF challenge .",
         year: "2024",
         color: "from-gray-500 to-gray-700",
         delay: 0.4,
