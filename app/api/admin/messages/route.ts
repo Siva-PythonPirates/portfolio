@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import mongoose from 'mongoose';
 
-// Define the Message schema
+// Define the Message schema (same as in the public API)
 const messageSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -38,52 +38,28 @@ const connectDB = async () => {
   }
 };
 
-// POST handler for creating a new message
-export async function POST(request: NextRequest) {
+// GET handler for retrieving all messages (protected)
+export async function GET(request: NextRequest) {
   try {
-    await connectDB();
-    
-    const { name, email, message } = await request.json();
-    
-    // Validate required fields
-    if (!name || !email || !message) {
+    // Verify admin secret
+    const authHeader = request.headers.get('authorization');
+    if (!authHeader || authHeader !== `Bearer ${process.env.ADMIN_SECRET}`) {
       return NextResponse.json(
-        { error: 'Name, email, and message are required' },
-        { status: 400 }
+        { error: 'Unauthorized' },
+        { status: 401 }
       );
     }
     
-    // Create a new message
-    const newMessage = new Message({
-      name,
-      email,
-      message
-    });
+    await connectDB();
     
-    // Save the message to the database
-    await newMessage.save();
+    const messages = await Message.find().sort({ createdAt: -1 });
     
-    // Return success response
-    return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Message sent successfully'
-      },
-      { status: 201 }
-    );
+    return NextResponse.json(messages);
   } catch (error) {
-    console.error('Error saving message:', error);
+    console.error('Error fetching messages:', error);
     return NextResponse.json(
       { error: 'Server error' },
       { status: 500 }
     );
   }
-}
-
-// GET handler - Return 403 Forbidden to prevent unauthorized access
-export async function GET() {
-  return NextResponse.json(
-    { error: 'Access forbidden' },
-    { status: 403 }
-  );
 } 

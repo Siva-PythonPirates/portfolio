@@ -206,7 +206,7 @@ export default function SkillsSection() {
       delay: 0.3,
     },
     {
-      title: "DevOps",
+      title: "DevOps (Basics)",
       icon: <Workflow className="h-6 w-6" />,
       skills: [
         { name: "Docker", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
