@@ -1,36 +1,3 @@
-export const educationData = [
-  {
-    school: "University of Technology",
-    degree: "Bachelor of Science",
-    field: "Computer Science",
-    startDate: "2018",
-    endDate: "2022",
-    location: "New York, USA",
-    description: "Focused on software development, algorithms, and data structures. Participated in various hackathons and coding competitions.",
-    icon: "GraduationCap",
-    achievements: [
-      "Dean's List for Academic Excellence",
-      "First Place in University Hackathon",
-      "Research Assistant in AI Lab",
-    ],
-  },
-  {
-    school: "Tech Institute",
-    degree: "Master of Science",
-    field: "Software Engineering",
-    startDate: "2022",
-    endDate: "2024",
-    location: "San Francisco, USA",
-    description: "Specialized in advanced software engineering practices, cloud computing, and distributed systems.",
-    icon: "BookOpen",
-    achievements: [
-      "Graduated with Distinction",
-      "Published Research Paper on Machine Learning",
-      "Lead Developer of University Portal",
-    ],
-  },
-]
-
 export const responsibilitiesData = [
   {
     title: "Founder of Cyber Sentinels Club",

@@ -84,7 +84,7 @@ export default function AchievementsSection() {
       {
         icon: <User className="h-10 w-10 text-cyan-400" />,
         title: "App Development Mentor – DEVs Club",
-        description: "Mentored peers at DEVs Club, Rajalakshmi Engineering College—conducted Flutter workshops and led a team for Smart India Hackathon 2024.",
+        description: "Mentored peers at DEVs Club, Rajalakshmi Engineering College, Conducted Flutter workshops and led a team for Smart India Hackathon 2024.",
         year: "2023-2024",
         color: "from-cyan-500 to-blue-500",
         delay: 0.2,
@@ -94,7 +94,7 @@ export default function AchievementsSection() {
       {
         icon: <Mic className="h-10 w-10 text-purple-400" />,
         title: "Bridging Gap Between AI and Automation Workshop",
-        description: "Conducted a 3-day workshop on RPA using UiPath at SVREC Nandhiyal using UiPath Beginner to Advanced concepts.",
+        description: "Conducted a 3-day workshop on RPA using UiPath at SVREC, Nandhiyal using UiPath teaching beginner to advanced concepts.",
         year: "2024",
         color: "from-purple-500 to-indigo-500",
         delay: 0.1,
@@ -102,7 +102,7 @@ export default function AchievementsSection() {
       {
         icon: <Mic className="h-10 w-10 text-blue-400" />,
         title: "Getting to know RPA using UiPath Workshop",
-        description: "Conducted a 3-day workshop at Sairam Engineering College covering UiPath beginner topics and Clipboard AI tool.",
+        description: "Conducted a 3-day workshop at Sairam Engineering College covering esentinal UiPath basics and Clipboard AI tool.",
         year: "2024",
         color: "from-blue-500 to-cyan-500",
         delay: 0.2,
